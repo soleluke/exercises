@@ -72,5 +72,5 @@ Let's expand past one session
   ```
   	$ tmux -S ~/tmux-socket attach
   ```
-* Send-keys: you can send keys to tmux targets from outside sessions. use `$ tmux -R -t <target> <key>` to send any combination of keys into the tmux session. You can also send keys to panes within a session by targeting a pane instead of a session
+* Send-keys: you can send keys to tmux targets from outside sessions. use `$ tmux send-keys -R -t <target> <key>` to send any combination of keys into the tmux session. You can also send keys to panes within a session by targeting a pane instead of a session
 * [Cheat sheet](https://gist.github.cm/MohamedAlaa/2961058) - https://gist.github.com/MohamedAlaa/2961058 (was used extensively for reference within the exercise)
