@@ -175,7 +175,7 @@ Let's reapply our stash
 ```
 This lists all stashes that can be applied
 ```
-	git stash apply stash@\(0\)
+	git stash apply stash@\{0\}
 ```
 Note that the file 'stashing' has returned
 Finish off by committing the changes
