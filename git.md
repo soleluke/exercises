@@ -27,7 +27,7 @@ Make a test directory in your home directory
 ###Cloning a repository
 ```
 	cd ~/git-test
-	git clone https;//github.com/soleluke/exercises.git
+	git clone https://github.com/soleluke/exercises.git
 ```
 This should clone the 'exercises' repository into a directory called 'exercises'. This directory can be renamed after cloning without affecting the repository
 ###Adding/Removing Files
