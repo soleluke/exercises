@@ -1,35 +1,36 @@
-#WuLug Workshop: git; free, open-source, distributed version control system
+#WuLug Workshop
+##git: free, open-source, distributed version control system
 **git** is a simple, easy to use version control system
 This exercise is available at https;//github.com/soleluke/exercises
 
 Most information for this exercise was pulled from the official Git documentation at https://git-scm.com/docs
 
-##Initializing a repository
+###Initializing a repository
 Make a test directory in your home directory
 ```
 	mkdir ~/git-test
 	cd ~/git-test
 ```
-###Standard Repository
+####Standard Repository
 ```
 	mkdir normal
 	cd normal
 	git init
 ```
-###Bare Repository
+####Bare Repository
 ```
 	cd ~/git-test
 	mkdir bare
 	cd bare
 	git init --bare
 ```
-##Cloning a repository
+###Cloning a repository
 ```
 	cd ~/git-test
 	git clone https;//github.com/soleluke/exercises.git
 ```
 This should clone the 'exercises' repository into a directory called 'exercises'. This directory can be renamed after cloning without affecting the repository
-##Adding/Removing Files
+###Adding/Removing Files
 ```
 	cp exercises/tmux.md normal/
 	cd normal
@@ -41,7 +42,7 @@ This should clone the 'exercises' repository into a directory called 'exercises'
 ```
 
 
-##Ignoring a file at the repository level
+###Ignoring a file at the repository level
 Lets say you have a configuration file that contains information you dont want included in the repo
 ```
 	mkdir .config
@@ -55,7 +56,7 @@ Note that the only change that git is noticing is the addition of .gitignore
 ```
 	git add .gitignore
 ```
-##Commiting your changes
+###Commiting your changes
 At this point, you have made changes in the repository. We need to save (or commit) these changes.
 Since all of our files are added to the repository, committing is as simple as running
 ```
@@ -81,7 +82,8 @@ After doing this, you may fix the identity used for this commit with:
 
 ```
 Follow those instructions to set your configuration and amend your commit
-##Remotes
+
+###Remotes
 Having a local git repository is nice, but the collaborative power of git comes from using shared remote repositories (i.e. GitHub, BitBucket).
 Lets go back to the exercises folder
 ```
@@ -96,17 +98,17 @@ Additional remotes can be created using
 ```
 	git remote add <remote-name>
 ```
-##Pushing your changes
+###Pushing your changes
 Try running `git push`
 This should cause an error. One of the key concepts about git is that everyone must have the proper permissions to perform an action on a remote.
 Since you do not have write access to the repository, you cannot push to the remote.
 
-##Pulling changes from a remote repository
+###Pulling changes from a remote repository
 To retrieve the latest version of the branch you are working on, use `git pull`. Since we cloned the 'exercises' repo at the beginning of the exercise, there probably wont be any changes, so git will tell you that we are already up-to-date
-##Fetching from a remote repository
+###Fetching from a remote repository
 Git maintains the repository information separately from what is known as the 'working copy' of the code. When you use `git pull`, your working copy is updated to the latest that you pulled. But what if you dont want to change your working copy, but still have the most up to date version?
 This is where fetching come in. running `git fetch <remote>` grabs the repository information and updates your local copy of it, without touching your working copy. You can apply these changes by merging them (merging will be covered later in the excercise).
-##Branching
+###Branching
 THus far, we have been making all changes on the master branch of the repository. This is not best practice in development environments, especially in collaborative ones
 Let's make a new branch to work on and switch to it
 ```
@@ -131,7 +133,7 @@ The -u flag in the command sets the upstream branch. This connects your local br
 ```
 	git push -u <remote> <branch-name>
 ```
-##Tagging
+###Tagging
 Git implements a tagging system that lets you easily identify different commits.
 Lets say you just released version 1.0 of this repository and you want to easily check what commit that is
 ```
@@ -152,7 +154,7 @@ Lightweight tags do not contain any extra information
 	git show v1.0-lw
 ```
 Note the differences in what is displayed between the two tags
-##Stashing current changes
+###Stashing current changes
 Sometimes, you need to make changes on a clean working directory, but have changes that are not ready for a commit, but you dont want to lose them
 
 This is where stashes come in.
@@ -177,7 +179,7 @@ This lists all stashes that can be applied
 ```
 Note that the file 'stashing' has returned
 Finish off by committing the changes
-##Merging changes from a branch
+###Merging changes from a branch
 At this point, development has some changes that we want to apply to the master branch.
 This is known as merging. There are many different scenarios for merging. This exercise covers a basic one
 First checkout the master branch using `git checkout master`
@@ -187,7 +189,7 @@ Next, we do our merge from development. You can merge using any tag, branch, or 
 ```
 In this scenario, since the only difference was that there were commits between the two branches, a "fast-forwad" is performed
 In other cases, git will alert you hat there was a merge conflict, insert information into the conflicting files and request that you fix the conflict and then commit those change
-##Hooks
+###Hooks
 Remember that bare repository that we created back up top? We are going to use that.
 Switch to the bare repository directory
 ```
