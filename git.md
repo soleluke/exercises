@@ -96,7 +96,7 @@ Since we started by cloning a repo, we already have a remote set up for us
 The origin remote is automatically created for any repository created with `git clone` for convenience.
 Additional remotes can be created using
 ```
-	git remote add <remote-name>
+	git remote add <remote-name> <remote-url>
 ```
 ###Pushing your changes
 Try running `git push`
