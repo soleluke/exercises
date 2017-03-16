@@ -1,16 +1,16 @@
-#WuLUG Workshop: tmux, the terminal multiplexer
+# WuLUG Workshop: tmux, the terminal multiplexer
 **tmux** is a program which allows the user to multiplex their terminal sessions, or have mutliple, separate terminal sessions open within one terminal window. Whether you are in a tty or an ssh session, tmux can help you get your work done, faster
 This workshop is available at https://github.com/soleluke/exercises
 
-##Exercise 1: Basic usage
+## Exercise 1: Basic usage
 1. Log into the system and open up a terminal
 2. Do`$ tmux`
   * Notice the green bar at the bottom. This tells you what you are currently running in your session
 
 3. Press <kbd>Ctrl</kbd>+<kbd>b</kbd>, then <kbd>d</kbd> to detach from the session
 
-##Exercise 2: Multiplexing
-####Part A: Panes
+## Exercise 2: Multiplexing
+#### Part A: Panes
 1. Do `$ tmux attach`
   to re-attach to your session from exercise 1
 2. Press <kbd>Ctrl</kbd>+<kbd>b</kbd>, then <kbd>Shift</kbd>+<kbd>5</kbd>
@@ -23,7 +23,7 @@ This workshop is available at https://github.com/soleluke/exercises
 6. Again, you can use <kbd>Ctrl</kbd>+<kbd>b</kbd> and an arrow key to switch panes.
   * Try <kbd>Ctrl</kbd>+<kbd>b</kbd>, then <kbd>Shift</kbd>+<kbd>'</kbd> now. What happens?
 
-####Part B: Windows
+#### Part B: Windows
 Up until now, we've been working in one window. Lets change that
 
 1. Press <kbd>Ctrl</kbd>+<kbd>b</kbd>, then <kbd>c</kbd> to create a new window
@@ -34,7 +34,7 @@ Up until now, we've been working in one window. Lets change that
 5. Kill all your windows
   * What happens?
 
-####Part C: Sessions
+#### Part C: Sessions
 Let's expand past one session
 
 1. Since you should have killed your session after killing all your windows in part c, do `$ tmux` to start a new session
@@ -58,7 +58,7 @@ Let's expand past one session
 12. Press <kbd>Ctrl</kbd>+<kbd>b</kbd>, then <kbd>s</kbd> to list the sessions again.
 13. Detach from this session. Run `$ tmux attach -t test2` to attach to the session named test2. Kill both sessions by killing all windows.
 
-##Miscellaneous
+## Miscellaneous
 * Press <kbd>Ctrl</kbd>+<kbd>b</kbd>, then <kbd>t</kbd>. Press any key within the pane to get out of big clock mode
 * Sockets: You can use sockets with tmux to do a variety of things. To set up a tmux session using a socket, run:
 
