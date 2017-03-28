@@ -98,7 +98,7 @@ Additional remotes can be created using
 ```
 ### Pushing your changes
 Try running `git push`
-This should cause an error. One of the key concepts about git is that everyone must have the proper permissions to perform an action on a remote.
+This should cause an error or prompt you to login to github. One of the key concepts about git is that everyone must have the proper permissions to perform an action on a remote.
 Since you do not have write access to the repository, you cannot push to the remote.
 
 ### Pulling changes from a remote repository
@@ -191,7 +191,7 @@ In other cases, git will alert you hat there was a merge conflict, insert inform
 Remember that bare repository that we created back up top? We are going to use that.
 Switch to the bare repository directory
 ```
-	cd ~/git-test/bare
+	cd ~/git-test/bare/hooks/
 	ls
 ```
 Note that there is a directory called 'hooks'
