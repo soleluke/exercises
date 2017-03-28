@@ -203,7 +203,7 @@ Lets view one of these
 ```
 We are going to make a post-receive hook for this bare repository.
 ```
-	echo '#!/bin/bash\necho $(date) >> ~/test.log' >> post-receive
+	echo -e '#!/bin/bash\necho $(date) >> ~/test.log' >> post-receive
 	chmod +x post-receive
 ```
 This will put the current date into the test.log file every time the repository receives something
